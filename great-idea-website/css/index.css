@@ -64,3 +64,30 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
+
+#nav-logo {
+	background-color: white;
+	color: grey;
+	position: fixed;
+   	display: block;
+ }
+
+header h1 {
+	width: 50px;
+	font-size: 100px;
+	display: inline-block;
+}
+
+img {
+	display: inline-block;
+}
+
+.bottom-row div {
+	display: inline-block;
+	width: 300px;
+}
+
+.top-row div {
+	display: inline-block;
+	width: 300px;
+}
