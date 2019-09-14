@@ -84,14 +84,13 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -104,45 +103,40 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
-
 body {
-	line-height: 1;
+  line-height: 1;
 }
-
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
-
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
-
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	height: 100%;
-	font-family: 'Titillium Web', sans-serif;
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
 h1,
@@ -150,109 +144,115 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: 'Bangers', cursive;
-	letter-spacing: 1px;
-	margin-bottom: 15px;
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
-/* ▼▼▼ Your code starts here! ▼▼▼ */
+/* Your code starts here! */
+a {
+  text-decoration: none;
+}
+/* END RESET */
 
-/* ▼▼▼ header / portion above divider ▼▼▼ */
+/*
+- set the width of the whole page
+- ensure content is displayed vertically
+*/
+
+body {
+  max-width: 880px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+/*
+- space links and picture evenly and horizontally
+- give nav some space above and below
+
+*/
+body nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  margin: 30px 0;
+}
+body nav a {
+  color: grey;
+  width: 14%;
+  text-align: center;
+}
+
+/*
+- align header so that it's horizontal
+
+Note: You may notice I don't adjust the width sometimes. That's because I looked to see if that's necessary first by adding "border: 1px solid red;" to the element. If it naturally takes the full width, it's not necessary to tell it to.
+*/
 header {
-	width: 880px;
-	font-size: 0px;
-	position: relative;
-}
-#nav-logo-bar {
-	background-color: white;
-	color: grey;
-	font-size: 15px;
-	padding: 5px 0px;
-	margin: 0px auto 5px auto;
-	position: fixed;
-	vertical-align: top;
+  display: flex;
+  margin-bottom: 30px;
 }
 
-#nav-logo-bar nav {
-	display: inline-block; 
-	margin: 0 auto;
+/* - Adjust the spacing around the "Innovation on Demand" and "Get Started" elements. */
+header section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-#nav-logo-bar img {
-	width: 100px;
+/* - Style the "Innovation On Demand" text */
+header section h1 {
+  font-size: 48px;
 }
 
-#nav-logo-bar a {
-	color: grey;
-	width: 100px;
-	margin: 10px;
-	text-decoration: none;
+/* - Style the "Get Started" button */
+header section button {
+  background: white;
+  width: 50%;
+  height: 32px;
+  font-size: 18px;
+  border: 1px solid black;
 }
 
-#nav-logo-bar a:hover {
-	color: black;
+/* - Style the round code picture */
+header img {
+  width: 50%;
 }
 
-.header-bottom {
-	height: 500px;
-	position: relative;
-	/* padding */
+/* - Style the dividing bar */
+hr {
+  border: 1px solid black;
+  width: 100%;
 }
 
-header h1 {
-	width: 50px;
-	font-size: 50px;
+/*
+- Make sure the content text sections are displayed horizontally
+- give containers space from code image bar
+*/
+.content-sections {
+  display: flex;
+}
+/* - Give content sub-sections space from one another */
+.sub-section {
+  margin: 20px 1%;
+}
+/* - Give space in between the content section, the contact section, and the footer */
+address {
+  margin: 20px 0;
+}
+/* - Space out the items in the contact section */
+address p {
+  padding: 5px 0;
 }
 
-button {
-	border: 1px solid black;
-	background-color: white;
-}
-
-.h1-button {
-	display: inline-block;
-	position: absolute;
-	margin-bottom: 50px;
-}
-
-#not-logo-but-still-in-header {
-	width: 300px;
-	position: absolute;
-	right: 0px;
-	margin: 10px 0px 50px 0px;
-}
-
-/* ▲▲▲ header/ portion above divider ▲▲▲ */
-
-/* ▼▼▼ below divider ▼▼▼*/
-
-h2, h3 {
-	font-size: 20px;
-}
-
-.top-row {
-	width: 880px;
-}
-.top-row div {
-	width: 48%;
-	margin: 0 auto;
-	display: inline-block;
-}
-
-.middle-img {
-	width: 880px;
-}
-
-.bottom-row {
-	width: 880px;
-}
-
-.bottom-row div {
-	width: 30%;
-	margin: 10px auto;
-	display: inline-block;
-}
-
+/* - Center the footer */
 footer {
-	font-size: 10px;
+  text-align: center;
 }
